@@ -1,6 +1,41 @@
 # Ember-code-highlight
 
-This README outlines the details of collaborating on this Ember addon.
+This is yet another [Highlight.js][hljs] Ember addon.
+
+All the others seemed stale and over complicated. I wanted super simple for
+those times when I wanted a simple code highlighting and none of the fluff. So
+things like line numbers and callouts are lest to the the consumer of this
+addon.
+
+All this does is simply take the component's block and runs highlight.js over
+it. The rest (escaping, formatting, line numbers, etc.) is left to you to add
+to the code block.
+
+## Usage
+
+```handlebars
+{{#code-highlight lang="js"}}
+function foobar(baz) {
+  return 'bazfoo';
+}
+{{/code-highlight}}
+```
+
+## Configuration
+
+Choose a style (default: `tomorrow`):
+
+```js
+// ember-cli-build.js
+
+var app = new EmberApp({
+  emberCodeHighlight: {
+    style: 'solarized-light'
+  }
+});
+```
+
+The list of available styles is available at [highlightjs.org][hljs].
 
 ## Installation
 
@@ -25,3 +60,5 @@ This README outlines the details of collaborating on this Ember addon.
 * `ember build`
 
 For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+
+[hljs]: https://highlightjs.org/
