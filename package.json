@@ -1,6 +1,6 @@
 {
   "name": "ember-code-highlight",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Yet another Highlight.js Ember addon that tries to be K.I.S.S.",
   "directories": {
     "doc": "doc",
